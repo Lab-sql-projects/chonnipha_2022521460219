@@ -1,0 +1,37 @@
+-- Insert data into categories table
+INSERT INTO categories (category_name) VALUES 
+('Electronics'), 
+('Furniture'),
+('Clothing');
+
+-- Insert data into products table
+INSERT INTO products (product_name, price, stock_quantity, category_id) VALUES 
+('Laptop', 1200.00, 50, 1),
+('Smartphone', 800.00, 100, 1),
+('Chair', 150.00, 200, 2),
+('Shirt', 30.00, 150, 3);
+
+-- Insert data into customers table
+INSERT INTO customers (first_name, last_name, email, phone, address) VALUES 
+('John', 'Doe', 'john.doe@example.com', '123-456-7890', '123 Main St'),
+('Jane', 'Smith', 'jane.smith@example.com', '987-654-3210', '456 Oak St'),
+('Emily', 'Johnson', 'emily.johnson@example.com', '555-123-4567', '789 Pine St');
+
+-- Insert data into orders table
+INSERT INTO orders (customer_id, order_date, total_amount) VALUES
+(1, '2025-04-01', 2400.00),
+(2, '2025-04-02', 950.00),
+(3, '2025-04-03', 500.00);
+
+-- Insert data into order_items table
+INSERT INTO Order_Items (order_id, product_id, quantity, price) VALUES
+(1, 1, 1, 1200.00),
+(1, 2, 1, 800.00),
+(2, 2, 1, 800.00),
+(3, 3, 2, 150.00);
+
+-- Insert data into payments table
+INSERT INTO Payments (order_id, payment_date, amount, payment_method, status) VALUES
+(1, '2025-04-01', 2400.00, 'Credit Card', 'Completed'),
+(2, '2025-04-02', 950.00, 'PayPal', 'Completed'),
+(3, '2025-04-03', 500.00, 'Debit Card', 'Pending');
